@@ -4,15 +4,17 @@ body {
  
 }
 
+.navbar_container {
+    background: black;
+    width: 100%;
+    height: 100px;
+}
+
+
 p {
     color: black;
   
 }
 
-.navbar_container {
-    background: black;
-    width: 100%;
-    height: 100px;
 
 
-}
