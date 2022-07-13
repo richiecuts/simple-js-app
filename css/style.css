@@ -1,8 +1,9 @@
 body {
   background-color: grey; 
-  text-align: center; 
+ 
 }
 
 p {
     color: black;
+    text-align: center;
 }
