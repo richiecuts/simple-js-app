@@ -34,7 +34,7 @@ for (let i=0; i<pokemonList.length; i++) {
       document.write('<p>' + pokemonList[i].name + ' - height: ' + pokemonList[i].height + " (That\'s just a little guy)");
     
     }else if (pokemonList[i].height>1){
-      document.write('<p>' + pokemonList[i].name + ' - height: ' + pokemonList[i].height + " (That\'s one chonky boi)");
+      document.write('<p>' + pokemonList[i].name + ' - height: ' + pokemonList[i].height + " (That\'s one chunky boy)");
     }else {
       document.write('<p>' + pokemonList[i].name + ' - height: ' + pokemonList[i].height + " ");
     }
