@@ -16,8 +16,14 @@ body {
     text-align: left;
     font-size: 75px;
     padding: 15px;
-    
 
+
+}
+
+.pokemon_image {
+    width: 25px;
+    height:25px;
+    padding: 15px;
 }
 
 
