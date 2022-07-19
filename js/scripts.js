@@ -27,8 +27,8 @@ let pokemonList = [
     }
 ]
 
-pokemonList.forEach(function(name) {
-    console.log(name);
+pokemonList.forEach(function(pokemon) {
+    console.log(pokemon.name + ' is ' .height + 'and is a type of' .types);
   });
 
 
