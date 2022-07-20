@@ -27,9 +27,17 @@ let pokemonList = [
     }
 ]
 
-pokemonList.forEach(function(pokemon) {
-    console.log(pokemon.name + ' is ' .height + 'and is a type of' .types);
-  });
+
+pokemonList.forEach(function (pokemon){
+    if (pokemon.height <1 && pokemon.height >0) {
+      document.write('<p>' + pokemon.name + ' - height: ' + pokemon.height + " (That\'s just a little guy)");
+    }else if (pokemon.height>1){
+      document.write('<p>' + pokemon.name + ' - height: ' + pokemon.height + " (That\'s one chonky boi)");
+    }else {
+      document.write('<p>' + pokemon.name + ' - height: ' + pokemon.height + " ");
+    }
+  });                                
+     
 
 
 
