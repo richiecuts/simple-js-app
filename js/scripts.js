@@ -28,26 +28,31 @@ let pokemonRepository = (function () {
     }
 ]
 
-return {
+     return {
     add: function(pokemon) {
       pokemonList.push(pokemon);
     },
     getAll: function() {
       return pokemonList;
-    }
+      
+          }
   };
 })();
 
+console.log(pokemonRepository.getAll());
+pokemonRepository.add({ name: 'Pikachu', height: '1.4', types: 'Mouse' });
+console.log(pokemonRepository.getAll());
 
-pokemonList.forEach(function (pokemon){
+
+pokemonRepository.getAll().forEach(function (pokemon){
     if (pokemon.height <1 && pokemon.height >0) {
-      document.write('<p>' + pokemon.name + ' - height: ' + pokemon.height + " (That\'s a little guy)");
+      document.write('<p>' + pokemon.name + ' - height: - ' + pokemon.height + " (That\'s a little guy)" + ' - types: ' + pokemon.types);
     }else if (pokemon.height>1){
-      document.write('<p>' + pokemon.name + ' - height: ' + pokemon.height + " (That\'s a big guy)");
+      document.write('<p>' + pokemon.name + ' - height: - ' + pokemon.height + " (That\'s a big guy)" + ' - types: ' + pokemon.types);
     }else {
-      document.write('<p>' + pokemon.name + ' - height: ' + pokemon.height + " ");
+      document.write('<p>' + pokemon.name + ' - height: - ' + pokemon.height + " ");
     }
-  });                                
+  });                             
      
 
 
