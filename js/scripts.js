@@ -52,5 +52,3 @@ console.log(pokemonRepository.getAll());
 pokemonRepository.getAll().forEach(pokemonRepository.addListItem);
 
 
-
-
