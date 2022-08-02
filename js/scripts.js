@@ -39,21 +39,43 @@ let pokemonRepository = (function () {
   };
 })();
 
-console.log(pokemonRepository.getAll());
-pokemonRepository.add({ name: 'Pikachu', height: '1.4', types: 'Mouse' });
-console.log(pokemonRepository.getAll());
+
+function addListItem(pokemon) {
+  let pokemonItem = document.querySelector(".pokemon-list");
+  let itemPokemon = document.createElement("li");
+  let button = document.createElement("button");
+  button.innerText = pokemon.name;
+  button.classList.add("button-class");
+  itemPokemon.appendChild(button);
+  pokemonItem.appendChild(itemPokemon);
+  button.addEventListener ('click', function(){
+    showDetails(pokemon);
+  });
+
+}
+
+function showDetails(pokemon) {
+  console.log(pokemon);
+  return {
+    add: function (pokemon) {
+      pokemonList.push(pokemon);
+    },
+    getAll: function () {
+      return pokemonList;
+    },
+    addListItem: addListItem
+  };
+}    
 
 
-pokemonRepository.getAll().forEach(function (pokemon){
-    if (pokemon.height <1 && pokemon.height >0) {
-      document.write('<p>' + pokemon.name + ' - height: - ' + pokemon.height + " (That\'s a little guy)" + ' - types: ' + pokemon.types);
-    }else if (pokemon.height>1){
-      document.write('<p>' + pokemon.name + ' - height: - ' + pokemon.height + " (That\'s a big guy)" + ' - types: ' + pokemon.types);
-    }else {
-      document.write('<p>' + pokemon.name + ' - height: - ' + pokemon.height + " ");
-    }
-  });                             
-     
+
+
+console.log(pokemonRepository.getAll());
+pokemonRepository.add({ name: "Pikachu", height: "1.4", types: "Mouse" });
+console.log(pokemonRepository.getAll());
+
+pokemonRepository.getAll().forEach(pokemonRepository.addListItem);
+
 
 
 
