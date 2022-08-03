@@ -39,5 +39,13 @@ p {
    
   }
 
+ul {
+    list-style: none;
+}
+
+li {
+    text-align: center;
+}
+
 
 
